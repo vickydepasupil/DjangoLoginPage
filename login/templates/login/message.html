@@ -1,0 +1,34 @@
+{% extends "login/header.html" %}
+
+	{% block content %}
+		{% if success_message %}
+		<div style="height:100px; width:500px; margin:auto; text-align:center;">
+			<h2>{{ success_message }}</h2>
+			<h3>{{ next_line }}</h3>
+			<h2></h2>
+			<img src="http://static.fjcdn.com/gifs/Molang_4849ea_5548807.gif" style="margin: auto;">
+		</div>
+		{% elif login_message %}
+		<div style="height:100px; width:500px; margin:auto; text-align:center;">
+			<h2>{{ login_message }}</h2>
+			<h2>{{ next_line }}</h2>
+			<h2></h2>
+			<img src="http://static.fjcdn.com/gifs/Molang_258fd0_5548807.gif" style="margin: auto;">
+			<div style="height:50px;"></div>
+			<div style="display: inline-block; position: right; width:75px;">
+				<form>
+					<a href="login/logout"><button class="btn btn-info btn-md">Logout</button></a>
+				</form>
+			</div>
+		</div>
+		{% else %}
+		<div style="height:100px; width:500px; margin:auto; text-align:center;">
+			<h2>{{ error_message }}</h2>
+			<h3>{{ third_line }}</h3>
+			<h2></h2>
+			<h5>{{ next_line }}</h5>
+			<div style="height:30px;"></div>
+			<img src="http://static.fjcdn.com/gifs/Molang_eb3dd3_5548807.gif" style="margin: auto;">
+		</div>
+		{% endif %}
+	{% endblock %}
