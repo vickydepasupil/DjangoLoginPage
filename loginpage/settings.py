@@ -126,12 +126,14 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 # Extra places for collectstatic to find static files.
-
-STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-
-    '/path/to/my_project/my_app/static/',
+    os.path.join(PROJECT_ROOT, 'static'),
 )
+STATIC_URL = '/static/'
+# STATICFILES_DIRS = (
+
+#     '/path/to/my_project/my_app/static/',
+# )
 
 MEDIA_URL = '/login/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'login')
