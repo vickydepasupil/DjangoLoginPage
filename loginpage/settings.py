@@ -143,3 +143,5 @@ STATICFILES_DIRS = (
 
 MEDIA_URL = '/login/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'login')
+
+STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
