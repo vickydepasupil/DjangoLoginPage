@@ -21,12 +21,12 @@ def register_view(request):
 		user = authenticate(username="username", password="password")
 		login(request, user)
 
-		context = {
-		"success_message": "Conratulations!",
-		"next_line": "You are now a registered happy peanut."
-		}
+		# context = {
+		# "success_message": "Conratulations!",
+		# "next_line": "You are now a registered happy peanut."
+		# }
 	
-		return render(request, "login/message.html", context)
+		# return render(request, "login/message.html", context)
 
 	context = {
 		"form": form,
