@@ -24,8 +24,6 @@ class RegistrationForm(forms.ModelForm):
 	password  = forms.CharField(label='Password', widget=forms.PasswordInput)
 	class Meta:
 		model = User
-<<<<<<< HEAD
+
 		fields = ['username','password']
-=======
-		fields = ['username','password']
->>>>>>> 3875b54dba33319d48b960c3316e2a767e31235a
+
