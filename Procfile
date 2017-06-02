@@ -1,1 +1,1 @@
-web: gunicron DjangoLoginPage.wsgi:application
+web: gunicorn DjangoLoginPage.wsgi:application
