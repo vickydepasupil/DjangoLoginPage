@@ -18,7 +18,7 @@ def register_view(request):
 		user.set_password(form.cleaned_data.get("password"))
 		user.save()
 
-		user = authenticate(username="username", password="password")
+		ser = authenticate(username="username", password="password")
 		login(request, user)
 
 		context = {
