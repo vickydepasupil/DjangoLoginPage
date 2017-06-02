@@ -18,4 +18,10 @@ class LoginForm(forms.Form):
  				raise forms.ValidationError("User does not exit")
 
 	 		return super(LoginForm, self).clean(*args, **kwargs)
+	
 
+class RegistrationForm(forms.ModelForm):
+	password  = forms.CharField(label='Password', widget=forms.PasswordInput)
+	class Meta:
+		model = User
+		fields = ['username','password']
