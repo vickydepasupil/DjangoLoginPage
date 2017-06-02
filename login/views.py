@@ -18,8 +18,8 @@ def register_view(request):
 		user.set_password(form.cleaned_data.get("password"))
 		user.save()
 
-		new_user = authenticate(username="username", password="password")
-		login(request, new_user)
+		user = authenticate(username="username", password="password")
+		login(request, user)
 
 		context = {
 		"success_message": "Conratulations!",
